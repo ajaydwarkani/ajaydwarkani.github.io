@@ -1,0 +1,44 @@
+body {
+    background-color: rgb(3, 108, 166);
+    /* background-color: #121212; */
+    /* color: #e0e0e0; */
+    color: rgb(112, 192, 33);
+}
+
+header {
+    background-color: white;
+}
+footer {
+    background-color: #1e1e1e;
+}
+
+nav ul li a {
+    /* color: #e0e0e0; */
+    color: #0d4061;
+    /* color: rgb(48, 140, 22); */
+}
+
+nav ul li a.selected {
+    border-bottom: 2px solid #0d4061; 
+    /* border-bottom: 2px solid rgb(48, 140, 22); */
+
+}
+
+/* .card {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+} */
+
+.card-content {
+    /* color: #e0e0e0; */
+    color: black;
+}
+
+button {
+    background-color: #333;
+    color: white;
+}
+
+a {
+    color: rgb(112, 192, 33);
+}

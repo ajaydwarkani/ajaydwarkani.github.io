@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;700&display=swap');
+/* @import url('https://use.typekit.net/kph6ddf.css?font-family=filosofia-basic-small-caps,serif:400:normal'); */
+@import url('https://use.typekit.net/kph6ddf.css?font-family=filosofia-grand-basic-small,serif:400:normal');
+
+
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    font-family: Poppins, Roboto, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    font-weight: 300;
+    /* Light green */
+    /* background-color: rgb(112, 192, 33, 0.10); */
+    /* Light blue */
+    background-color: rgb(3, 108, 166, 0.20);
+    /* color: white; */
+}
+
+/* .main-home::before {
+    content: '';
+    background-image: url('../assets/logo.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.05;
+    height: 95%;
+} */
+
+
+header {
+    background-color: transparent;
+    color: #0d4061;
+    padding: 0.1em 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 1em;
+}
+
+nav ul li a {
+    color: black;
+    text-decoration: none;
+}
+
+nav ul li a.selected {
+    border-bottom: 2px solid rgb(114, 113, 113);
+    /* border-bottom: 2px solid rgb(3, 108, 166); */
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+}
+
+nav h1 {
+    /* font-family: 'filosofia-basic-small-caps', serif; */
+    font-family: filosofia-grand-basic-small, serif;
+    /* font-weight: 700;
+    font-style: normal; */
+    font-size: 2em;
+    margin: 0;
+}
+
+.logo-title-container {
+    display: flex;
+    align-items: center;
+}
+
+.header-logo {
+    height: 3em; /* Adjust the size as needed */
+    margin-right: 0.5em; /* Adjust spacing as needed */
+    padding-left: 0.5em; /* Adjust spacing as needed */
+}
+
+main {
+    padding: 2em;
+    flex: 1;
+}
+
+.main-home, .main-contact, .main-news, .main-learn {
+    justify-content: center;
+    align-items: flex-start;
+    text-align: center;
+}
+
+.tagline {
+    font-size: 2em;
+    /* color: #666; */
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 0.1em 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    font-size: 0.8em;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-top: 1em;
+}
+
+form input, form textarea {
+    margin-top: 0.5em;
+    padding: 0.5em;
+    font-size: 1em;
+}
+
+form button {
+    margin-top: 1em;
+    padding: 0.5em;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.gradient-background {
+    /* background: linear-gradient(to bottom, #f3f6f3, #c1dec1); */
+}
+
+
+.card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 1em auto;
+    padding: 1em;
+    max-width: 600px;
+    display: flex;
+    align-items: center;
+}
+
+.card img {
+    border-radius: 50%;
+    margin-right: 1em;
+    width: 150px;
+    height: 150px;
+}
+
+.card-content {
+    text-align: left;
+    align-self: flex-start;
+}
+
+.card h2 {
+    margin: 0.5em 0;
+}
+
+.card p {
+    font-size: 0.9em;
+    color: #666;
+}
+
+#theme-toggle {
+    border: none;
+}
+
+.news-img-border {
+    /* border: 5px solid #0d4061; */
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    margin: 10px;
+}
