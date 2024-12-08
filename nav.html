@@ -3,14 +3,18 @@
     <img src="assets/logo.svg" alt="PlastiClear Logo" class="header-logo" />
     <h1>PlastiClear</h1>
   </div>
-  <ul>
+  <div class="menu-toggle">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <ul class="nav-menu">
     <li><a href="#" class="selected" onclick="selectTab(this); loadContent('home')">Home</a></li>
     <li><a href="#" onclick="selectTab(this); loadContent('team'); loadProfiles();">Team</a></li>
     <li><a href="#" onclick="selectTab(this); loadContent('learn')">Learn</a></li>
     <li><a href="#" onclick="selectTab(this); loadContent('news')">News</a></li>
     <li><a href="#" onclick="selectTab(this); loadContent('contact')">Contact</a></li>
     <li><button id="theme-toggle" onclick="toggleTheme()"><span class="theme-icon">🌙</span></button></li>
-  
   </ul>
 </nav>
 <script src="js/main.js"></script>
