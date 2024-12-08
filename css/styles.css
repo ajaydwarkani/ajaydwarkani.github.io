@@ -110,6 +110,7 @@ main {
     align-items: flex-start;
     text-align: center;
     height: 95%;
+    margin-bottom: 25px;
 } 
 
 .main-news, .main-learn {
@@ -135,7 +136,7 @@ footer {
     position: fixed;
     width: 100%;
     bottom: 0;
-    font-size: 0.8em;
+    font-size: 0.5em;
 }
 
 
@@ -173,11 +174,16 @@ footer {
     font-size: 1.5em;
     font-weight: bold;
     color: #0d4061;
+    margin-bottom: -8px;
 }
 
 .card-profile-title a img {
     margin: 0;
     margin-left: 7px;
+}
+
+.card-profile-title a {
+    height: 24px;   /* To remove extra space below the image */    
 }
 
 #theme-toggle {
@@ -215,7 +221,7 @@ footer {
 }
 
 .responsive-img {
-    width: 95%;
+    width: 87%;
     height: auto;
     max-width: 1000px;
 }
@@ -297,6 +303,10 @@ footer {
     .card-content {
         text-align: center;
         align-self: center;
+    }
+
+    .card-content i {
+        font-size: 0.8em;
     }
 
     .card-profile-title {
