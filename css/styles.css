@@ -23,20 +23,21 @@ body {
     /* color: white; */
 }
 
-/* .main-home::before {
+.main-home::before {
     content: '';
     background-image: url('../assets/logo.svg');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     position: absolute;
-    top: 0px;
+    top: 100px;
     right: 0px;
     bottom: 0px;
     left: 0px;
-    opacity: 0.05;
-    height: 95%;
-} */
+    opacity: 0.2;
+    height: 85%;
+    z-index: -1;
+}
 
 
 header {
@@ -148,7 +149,6 @@ form button {
     /* background: linear-gradient(to bottom, #f3f6f3, #c1dec1); */
 }
 
-
 .card {
     background-color: white;
     border-radius: 8px;
@@ -163,8 +163,8 @@ form button {
 .card img {
     border-radius: 50%;
     margin-right: 1em;
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
 }
 
 .card-content {
@@ -190,4 +190,79 @@ form button {
     padding: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     margin: 10px;
+}
+
+.nav-menu {
+    display: flex; /* Ensure the nav menu is displayed in non-mobile view */
+}
+
+.nav-menu.active {
+    display: block;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+.menu-toggle span {
+    height: 3px;
+    width: 25px;
+    background: black;
+    margin: 4px 0;
+}
+
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .nav-menu {
+        width: 100%;
+        display: none; /* Hide the nav menu by default in mobile view */
+        flex-direction: column;
+        position: absolute;
+        top: 60px; /* Adjust this value based on the height of your nav bar */
+        left: 0;
+        background-color: white; /* Adjust background color as needed */
+        z-index: 1;
+    }
+
+    .nav-menu.active {
+        display: flex; /* Display the nav menu when active class is added */
+    }
+
+    .nav-menu li {
+        width: 100%;
+        text-align: center;
+        margin: 0;
+    }
+
+    .nav-menu li a {
+        display: block;
+        padding: 1em;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .card {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card img {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 1em;
+    }
+
+    .card-content {
+        text-align: center;
+        align-self: center;
+    }
 }
