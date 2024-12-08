@@ -4,10 +4,26 @@ document.addEventListener('DOMContentLoaded', function () {
     .then((data) => {
       document.getElementById('nav-placeholder').innerHTML = data;
       document.querySelector('nav ul li a').classList.add('selected'); // Ensure Home is selected by default
+
+      const menuToggle = document.querySelector('.menu-toggle');
+      const navMenu = document.querySelector('.nav-menu');
+      if (menuToggle) {
+        menuToggle.addEventListener('click', function () {
+          navMenu.classList.toggle('active');
+        });
+      }
+
+      const tabs = document.querySelectorAll('nav ul li a');
+      tabs.forEach(tab => {
+        tab.addEventListener('click', function () {
+          navMenu.classList.remove('active');
+        });
+      });
     })
     .catch((error) => {
       console.error(error);
     });
+
   fetch('footer.html')
     .then((response) => response.text())
     .then((data) => {
@@ -16,6 +32,7 @@ document.addEventListener('DOMContentLoaded', function () {
     .catch((error) => {
       console.error(error);
     });
+
   loadContent('home');
 });
 
