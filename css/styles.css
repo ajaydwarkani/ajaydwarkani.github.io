@@ -7,6 +7,7 @@
 body, html {
     height: 100%;
     margin: 0;
+    min-width: 375px;
 }
 
 body {
@@ -45,6 +46,12 @@ header {
     color: #0d4061;
     padding: 0.1em 0;
     text-align: center;
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    min-width: 375px;
 }
 
 nav ul {
@@ -71,7 +78,7 @@ nav ul li a.selected {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+    min-width: 375px;
 }
 
 nav h1 {
@@ -97,12 +104,22 @@ nav h1 {
 main {
     padding: 2em;
     flex: 1;
+    margin-top: 20px; /* Adjust this value based on the height of your nav bar */
 }
 
 .main-home, .main-contact, .main-news, .main-learn {
     justify-content: center;
     align-items: flex-start;
     text-align: center;
+}
+
+.main-contact p {
+    font-size: 1.5em;
+    margin-bottom: 0;
+}
+
+.main-news, .main-learn {
+    margin-top: 1.5em;
 }
 
 .tagline {
@@ -145,9 +162,6 @@ form button {
     cursor: pointer;
 }
 
-.gradient-background {
-    /* background: linear-gradient(to bottom, #f3f6f3, #c1dec1); */
-}
 
 .card {
     background-color: white;
@@ -158,6 +172,7 @@ form button {
     max-width: 600px;
     display: flex;
     align-items: center;
+    min-width: 350px;
 }
 
 .card img {
@@ -172,13 +187,21 @@ form button {
     align-self: flex-start;
 }
 
-.card h2 {
-    margin: 0.5em 0;
-}
-
 .card p {
     font-size: 0.9em;
     color: #666;
+}
+
+.card-profile-title {
+    display: flex;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #0d4061;
+}
+
+.card-profile-title a img {
+    margin: 0;
+    margin-left: 7px;
 }
 
 #theme-toggle {
@@ -205,6 +228,7 @@ form button {
     flex-direction: column;
     cursor: pointer;
     margin-left: auto;
+    margin-right: 1em;
 }
 
 .menu-toggle span {
@@ -215,6 +239,10 @@ form button {
 }
 
 @media (max-width: 768px) {
+    main {
+        padding: 0.7em;
+    }
+
     .nav-container {
         flex-direction: row;
         align-items: center;
@@ -265,4 +293,18 @@ form button {
         text-align: center;
         align-self: center;
     }
+
+    .card-profile-title {
+    display: flex;
+    font-size: 1em;
+    font-weight: bold;
+    color: #0d4061;
+    justify-self:center;
+    }
+
+    .card-profile-title a img {
+        margin: 0;
+        margin-left: 7px;
+    }
+
 }
